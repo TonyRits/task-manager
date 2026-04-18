@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = "https://task-manager-s8qq.onrender.com";
 
 function getToken() { return localStorage.getItem("token"); }
 function showMsg(msg, color="green") {
