@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Auth Section -->
+    <div id="auth-section">
+        <h1>📝 Task Manager</h1>
+
+        <!-- Register -->
+        <div class="card" id="register-form">
+            <h2>Register</h2>
+            <input type="text" id="reg-username" placeholder="Username" />
+            <input type="email" id="reg-email" placeholder="Email" />
+            <input type="password" id="reg-password" placeholder="Password" />
+            <button onclick="register()">Register</button>
+            <p>Already have account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <!-- Login -->
+        <div class="card hidden" id="login-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" />
+            <input type="password" id="login-password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+            <p>No account? <a href="#" onclick="showRegister()">Register</a></p>
+        </div>
+    </div>
+
+    <!-- Task Section -->
+    <div id="task-section" class="hidden">
+        <div class="topbar">
+            <h1>📝 My Tasks</h1>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Create Task -->
+        <div class="card">
+            <h2>Create Task</h2>
+            <input type="text" id="task-title" placeholder="Task Title" />
+            <input type="text" id="task-desc" placeholder="Description (optional)" />
+            <button onclick="createTask()">Add Task</button>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter-bar">
+            <button onclick="fetchTasks()">All</button>
+            <button onclick="fetchTasks(false)">Pending</button>
+            <button onclick="fetchTasks(true)">Completed</button>
+        </div>
+
+        <!-- Task List -->
+        <div id="task-list"></div>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

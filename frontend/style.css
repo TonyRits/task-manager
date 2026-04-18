@@ -1,0 +1,112 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+h1 { text-align: center; margin-bottom: 20px; color: #333; }
+h2 { margin-bottom: 15px; color: #444; }
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover { background: #45a049; }
+
+.hidden { display: none; }
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+.logout-btn {
+    width: auto;
+    padding: 8px 16px;
+    background: #e74c3c;
+}
+
+.logout-btn:hover { background: #c0392b; }
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+.filter-bar button {
+    background: #3498db;
+}
+
+.filter-bar button:hover { background: #2980b9; }
+
+.task-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-card.done { border-left: 5px solid #4CAF50; }
+.task-card.pending { border-left: 5px solid #e74c3c; }
+
+.task-info h3 { font-size: 16px; color: #333; }
+.task-info p { font-size: 13px; color: #888; }
+
+.task-actions { display: flex; gap: 8px; }
+
+.task-actions button {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin: 0;
+}
+
+.complete-btn { background: #3498db; }
+.complete-btn:hover { background: #2980b9; }
+.delete-btn { background: #e74c3c; }
+.delete-btn:hover { background: #c0392b; }
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
